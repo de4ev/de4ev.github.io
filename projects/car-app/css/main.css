@@ -1,0 +1,78 @@
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  color: #333; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.pointer {
+  cursor: pointer; }
+
+.car-img {
+  height: 50vh;
+  min-height: 450px;
+  max-height: 600px; }
+
+.phone-block {
+  height: 55px; }
+
+.phoneNumber {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.2; }
+  .phoneNumber:hover {
+    text-decoration: none;
+    color: #666; }
+
+.btn-outline-success {
+  width: 150px; }
+
+.log-date {
+  float: right; }
+
+.modal {
+  display: block; }
+
+.modal-price {
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-size: 24px; }
+
+.slideFade-enter-active,
+.slideFade-leave-active {
+  transition: all .3s; }
+
+.slideFade-enter, .slideFade-leave-to {
+  opacity: 0;
+  transform: translateY(20px); }
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: all .5s; }
+
+.modal-enter, .modal-leave-to {
+  opacity: 0;
+  transform: translateY(-400px); }
+
+.fade-enter-active {
+  animation: 0.4s fade forwards; }
+
+.fade-leave-active {
+  animation: 0.4s fade reverse; }
+
+.fade-enter, .fade-leave-to {
+  opacity: 0; }
+
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.5; } }
