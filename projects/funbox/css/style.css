@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #0e0e0e;
+}
+
+#app {
+  width: 100vw;
+  min-height: 100vh;
+  min-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url('../img/tile.jpg');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+}
+.card-wrapper {
+  margin: 30px 60px;
+}
+.card {
+  display: block;
+  position: relative;
+  width: 320px;
+  height: 480px;
+  margin-bottom: 15px;
+  position: relative;
+  border-radius: 12px;
+  background: linear-gradient(135deg, transparent 30px, #1698d9 0);
+  transition: transform .15s ease-in;
+  perspective: 600px;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.03)
+}
+.card:hover + .card-text .buy-text-button, .card:hover + .card-text .text-blue {
+  color: #2ea8e6;
+  border-color: #2ea8e6;
+}
+.card:hover .product-weight {
+  background-color: #2ea8e6;
+}
+.card.selected {
+  background: linear-gradient(135deg, transparent 30px, #d91667 0);
+}
+.card.selected .product-weight {
+  background-color: #d91667;
+}
+.card.selected.hover {
+  background: linear-gradient(135deg, transparent 30px, #e62e7a 0);
+}
+.card.selected.hover .product-weight {
+  background-color: #e62e7a;
+}
+.card.disabled {
+  background: linear-gradient(135deg, transparent 30px, #b3b3b3 0);
+  cursor: default;
+}
+.card.disabled p, .card.disabled .product-title {
+  color: #b3b3b3;
+}
+.card.disabled .product-image {
+  opacity: 0.5;
+}
+.card.disabled .product-weight {
+  background-color: #b3b3b3;
+}
+.card-body {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  top: 4px;
+  padding: 20px 44px;
+  background: linear-gradient(135deg, transparent 28px, #f2f2f2 0);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  font-family: "Trebuchet MS";
+}
+p {
+  color: #666;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+}
+.product-topline {
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+.product-title {
+  color: #000;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+  margin: 0 0 18px -2px;
+}
+.product-title span {
+  display: block;
+  font-size: 24px;
+  line-height: 24px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+.product-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom-left-radius: 8px;
+}
+.product-weight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #1698d9;
+  position: absolute;
+  bottom: 11px;
+  right: 11px;
+  color: #fff;
+  font-size: 42px;
+  line-height: 40px;
+}
+.product-weight span {
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+.text-rose {
+  color: #e62e7a;
+}
+.text-blue {
+  color: #1698d9;
+}
+
+.shadow {
+  position: absolute;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 28px, rgba(0,0,0, .6) 0)
+}
+.card:hover .shadow {
+  background: linear-gradient(135deg, transparent 28px, rgba(0,0,0, .5) 0)
+}
+.card:hover .react-logo {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 8000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 8000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 8000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-transition: rotate(3600deg);
+}
+.card:hover .vue-logo {  
+  -webkit-animation-name: spinZ;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spinZ;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spinZ;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-transition: rotate(3600deg);
+}
+.vue-logo {
+  transform-style: preserve-3d;
+  position: absolute;
+  right: -80px;
+  top: 140px;
+}
+.react-logo {
+  position: absolute;
+  right: -100px;
+  top: 120px;
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+@-moz-keyframes spinZ {
+  from { -moz-transform: rotateY(0deg); }
+  to { -moz-transform: rotateY(360deg); }
+}
+@-webkit-keyframes spinZ {
+  from { -webkit-transform: rotateY(0deg); }
+  to { -webkit-transform: rotateY(360deg); }
+}
+@keyframes spinZ {
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(360deg);}
+}
