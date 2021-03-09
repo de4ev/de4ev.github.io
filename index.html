@@ -1,1 +1,210 @@
-test pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            background-color: #2F2F2F;
+            font-family: 'Montserrat', sans-serif;
+            color: #cacaca;
+            padding: 60px 20px 40px;
+        }
+        .wrapper {
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            /* width: 100%; */
+            max-width: 800px;
+            margin: 30px auto;
+        }
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 48px;
+        }
+        .cards-container {
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* width: 100%; */
+            /* height: 100%; */
+            /* background-color: red; */
+            /* background-color: #2F2F2F; */
+        }
+        .card {
+            display: flex;
+            width: 100%;
+            /* height: 200px; */
+            margin-bottom: 40px;
+            /* background-color: #ccc; */
+        }
+        .card a,
+        .card a:visited {
+            color: inherit;
+            transition: color 0.3s;
+        }
+        .card a:hover {
+            color: #e4e4e4;
+        }
+        .card-img  {
+            width: 500px;
+            height: auto;
+            overflow: hidden;
+        }
+        .card-img img {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            padding: 4px 20px 10px;
+        }
+        .card-text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            display: inline-block;
+            font-size: 24px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .links {
+            margin-bottom: 14px;
+            display: flex;
+            /* flex-direction: column; */
+        }
+        .link {
+            margin-right: 15px;
+        }
+        .tags {
+            display: flex;
+        }
+        .tag {
+            font-size: 12px;
+            padding: 4px 14px;
+            border: 1px solid rgb(124, 124, 124);
+            border-radius: 6px;
+            transition: .3s;
+        }
+        .tag:hover {
+            /* background-color: #202020; */
+            color: #e4e4e4;
+            border-color: #e4e4e4;
+        }
+        .tag:not(:last-child) {
+            margin-right: 8px;
+        }
+        @media (max-width: 768px) {
+            .card-img {
+                width: 400px;
+            }
+        }
+        @media (max-width: 576px) {
+            .card {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 60px;
+            }
+            .card-img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .card-body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+            <h1>projects</h1>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-img">
+                        <a href="https://de4ev.github.io/projects/idalite">
+                            <img src="images/idalite.png">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://de4ev.github.io/projects/idalite">
+                            <p class="card-title">IdaLite</p>
+                        </a>
+                        <p class="card-text">Тестовое задание. Каталог товаров. Категории товаров и сами товары загружаются и отрисовываются на сервере. Сортировка по параметру. Корзина с сохранением состояния. Валидация формы заказа. Мобильная версия.</p>
+                        <div class="links">
+                            <a href="https://github.com/de4ev/idalite" class="link">Source code</a>
+                            <a href="https://de4ev.github.io/projects/idalite" class="link">Demo</a>
+                        </div>
+                        <div class="tags">
+                            <div class="tag">SSR</div>
+                            <div class="tag">Nuxt</div>
+                            <div class="tag">Vue</div>
+                            <div class="tag">Vuex</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <a href="https://de4ev.github.io/projects/pepelane">
+                            <img src="images/pepelane.png">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://de4ev.github.io/projects/pepelane"><p class="card-title">Pepelane</p></a>
+                        <p class="card-text">Тестовое задание. Сайт аренды транспортного средства. Взаимодействие с api, фильтрация, вложенные маршруты. Возможность добавления транспортного средства. Темная тема. Мобильная версия.</p>
+                        <div class="links">
+                            <a href="https://github.com/de4ev/pepelane" class="link">Source code</a>
+                            <a href="https://de4ev.github.io/projects/pepelane" class="link">Demo</a>
+                        </div>
+                        <div class="tags">
+                            <div class="tag">Nuxt</div>
+                            <div class="tag">Vue</div>
+                            <div class="tag">Vuex</div>
+                            <div class="tag">Sass</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <a href="https://de4ev.github.io/projects/tableui">
+                            <img src="images/tableui.png">
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <a href="https://de4ev.github.io/projects/tableui">
+                            <p class="card-title">TableUI</p>
+                        </a>
+                        <p class="card-text">Тестовое задание. Таблица с возможностью выбора отображаемых колонок, сортировкой, пагинацией. Взаимодействие с api.</p>
+                        <div class="links">
+                            <a href="https://github.com/de4ev/tableui-idaproject" class="link">Source code</a>
+                            <a href="https://de4ev.github.io/projects/tableui" class="link">Demo</a>
+                        </div>
+                        <div class="tags">
+                            <div class="tag">Vue</div>
+                            <div class="tag">Vuex</div>
+                            <div class="tag">Sass</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+    </div>
+    
+</body>
+</html>
